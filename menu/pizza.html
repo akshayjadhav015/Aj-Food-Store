@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        .restaurant-menu {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 50px;
+            row-gap: 50px;
+        }
+
+        .menu-item {
+            justify-content: center;
+            width: 200px;
+            margin: 0 auto;
+            border-radius: 6px;
+            overflow: hidden;
+            background-color: white;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            padding: 20px;
+        }
+
+        .menu-item img {
+            width: 100%;
+            height: 200px;
+            border-radius: 10px;
+
+        }
+
+        .btn-menu {
+
+            padding: 6px 10px;
+            font-size: 10px;
+            border-radius: 4px;
+            text-align: center;
+            background: #fefffe;
+            border: 1px solid rgba(71, 125, 252, 0.943);
+            color: rgb(105, 14, 253);
+            margin-left: 130px;
+
+        }
+
+        /* Media Queries for responsiveness */
+        @media (max-width: 600px) {
+            .menu-item {
+                width: 80%;
+                /* Full width on small screens */
+            }
+
+            .restaurant-menu {
+                padding: 10px;
+                /* Reduced padding */
+            }
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 300px;
+            background-color: #4CAF50;
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        a {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            margin-left: 20px;
+
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+        }
+
+        .navbar .logo {
+            font-size: 35px;
+            font-weight: 700;
+            color: #333;
+        }
+
+        .navbar .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .navbar .nav-links .a1 {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            font-size: 25px;
+            font-weight: 400;
+            position: relative;
+        }
+
+        .navbar .nav-links .a1.active {
+            color: #ff007f;
+        }
+
+        .navbar .nav-links .a1::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 2px;
+            background-color: blue;
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            transition: width 0.3s;
+        }
+
+        .navbar .nav-links .a1.active::after {
+            width: 100%;
+
+
+        }
+
+        .navbar .nav-links .a1:hover::after {
+            width: 100%;
+        }
+
+        .fixed {
+            position: fixed;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="fixed">
+        <header class="navbar">
+            <nav class="nav-links">
+                <a class="a1" href="../menu.html">⬅️Back</a>
+            </nav>
+            <div class="logo">AJ Food Store</div>
+        </header>
+    </div><br><br><br><br>
+    <div class="restaurant-menu ">
+        <div class="menu-item">
+            <img src="../Pizza-img/Uttapam-Pizza.jpg" alt="">
+
+            <div class="title">Food Restaurant | Uttapam-Pizza</div>
+
+            <div class="location">Indian</div>
+
+            <div class="order flex">
+                <div class="price">&#8377; 250.00</div>
+                <a href="../order1/Order2.html" class="btn btn-menu">Order Now</a>
+            </div>
+        </div>
+        <br>
+        <div class="menu-item">
+            <img src="../Pizza-img/Keema-Pizza.jpg" alt="" />
+
+            <div class="title">Food Restaurant | Keema-Pizza</div>
+
+            <div class="location">Indian</div>
+
+            <div class="order flex">
+                <div class="price">&#8377; 250.00</div>
+                <a href="../order1/Order2.html" class="btn btn-menu">Order Now</a>
+            </div>
+        </div>
+        <div class="menu-item">
+            <img src="../Pizza-img/Neapolitan-Pizza-1.jpg" alt="" />
+
+            <div class="title">Food Restaurant | Keema-Pizza</div>
+
+            <div class="location">Indian</div>
+
+            <div class="order flex">
+                <div class="price">&#8377; 250.00</div>
+                <a href="../order1/Order2.html" class="btn btn-menu">Order Now</a>
+            </div>
+        </div>
+        <br>
+        <div class="menu-item">
+            <img src="../Pizza-img/Tandoori-Chicken-Pizza.jpg" alt="" />
+
+            <div class="title">Food Restaurant | Tandoori-Chicken-Pizza</div>
+
+            <div class="location">Indian</div>
+
+            <div class="order flex">
+                <div class="price">&#8377; 250.00</div>
+                <a href="../order1/Order2.html" class="btn btn-menu">Order Now</a>
+            </div>
+        </div>
+        <br>
+        <div class="menu-item">
+            <img src="../Pizza-img/Paneer-Tikka-Pizza.jpg" alt="" />
+
+            <div class="title">Food Restaurant |Paneer-Tikka-Pizza</div>
+
+            <div class="location">Indian</div>
+
+            <div class="order flex">
+                <div class="price">&#8377; 250.00</div>
+                <a href="../order1/Order2.html" class="btn btn-menu">Order Now</a>
+            </div>
+        </div>
+        <br>
+        <div class="menu-item">
+            <img src="../Pizza-img/Onion-Pizza-1.jpg" alt="" />
+
+            <div class="title">Food Restaurant | Onion-Pizza</div>
+
+            <div class="location">Indian</div>
+
+            <div class="order flex">
+                <div class="price">&#8377; 250.00</div>
+                <a href="../order1/Order2.html" class="btn btn-menu">Order Now</a>
+            </div>
+        </div>
+        <br>
+        <!-- <div class="menu-item">
+            <img src="../Pizza-img/Neapolitan-Pizza-1.jpg" alt="" />
+
+            <div class="title">Food Restaurant |Neapolitan-Pizza</div>
+
+            <div class="location">Indian</div>
+
+            <div class="order flex">
+                <div class="price">&#8377; 250.00</div>
+                <a href="../order1/Order2.html" class="btn btn-menu">Order Now</a>
+            </div> -->
+        <br>
+
+    </div>
+    </div>
+    <footer> <p>Copyright © 2024 Design By Developer Akshay Jadhav</p></footer>
+   
+</body>
+
+</html>

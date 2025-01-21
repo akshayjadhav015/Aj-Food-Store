@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> AJ Food Store</title>
+    <!-- CSS -->
+    <!-- <link rel="stylesheet" href="style.css"> -->
+       
+    <style>* 
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap");
+
+
+/* Base */
+:root {
+    --clr-primary: deeppink;
+    --clr-secondary: #272d36;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: "Josefin Sans", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: white;
+    color: var(--clr-secondary);
+    overflow-x: hidden;
+}
+
+.section {
+    width: 100%;
+    padding: 40px 0;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    /* 1140px */
+    max-width: 120rem;
+    padding: 0 3.2rem;
+    margin: 28px auto;
+}
+
+.grid {
+    display: grid;
+    column-gap: 6.4rem;
+    row-gap: 9.6rem;
+}
+
+.grid--3-cols {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.margin-right-md {
+    margin-bottom: 4.8rem !important;
+}
+
+strong {
+    font-weight: 500;
+}
+
+/* Restaurant Menu */
+
+#menu{
+    background-color: whitesmoke;
+}
+
+.category {
+    list-style: none;
+    text-align: center;
+    margin: 20px 0 40px 0;
+}
+
+.category li {
+    display: inline-block;
+    margin: 0 15px;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.category li.active {
+    color: deeppink;
+}
+
+.restaurant-menu {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 6px;
+    row-gap: 40px;
+}
+
+.menu-item {
+    width: 260px;
+    margin: 0 auto;
+    border-radius: 6px;
+    overflow: hidden;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 20px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+}
+
+.menu-item img {
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+}
+
+.order {
+    justify-content: space-between;
+}
+
+.btn-menu {
+    padding: 6px 10px;
+    font-size: 16px;
+    text-align: center;
+    background: #fff;
+    border: 1px solid deeppink;
+    color: deeppink;
+}
+
+.title {
+    font-size: 18px;
+    font-weight: 300;
+    margin: 8px 0;
+}
+
+.location {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+/* End Restaurant Menu */
+
+/* FAQ */
+#faq .secondary {
+    text-align: center;
+}
+
+.faq {
+    width: 60%;
+    margin: 50px auto 20px auto;
+}
+
+summary {
+    padding: 1em;
+    border: 1px solid #b2b2b2;
+    margin-bottom: 1em;
+    cursor: pointer;
+    outline: none;
+    border-radius: 0.3em;
+    font-weight: 600;
+}
+
+details[open] summary~* {
+    animation: open 1s ease-in-out;
+}
+
+@keyframes open {
+    from {
+        opacity: 1;
+        margin-top: -10px;
+    }
+
+    top {
+        opacity: 1;
+        margin-top: 0;
+    }
+}
+
+/* End FAQ */
+
+/* App */
+#app {
+    text-align: center;
+    background-color: whitesmoke;
+}
+
+.app-store {
+    background: #000;
+    margin: 0 10px;
+    padding: 4px 16px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 12px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.app-store p {
+    margin-top: 8px;
+}
+
+.app-store span {
+    font-size: 16px;
+    line-height: 25px;
+}
+
+.app-store ion-icon {
+    font-size: 30px;
+    margin-right: 10px;
+}
+
+.download {
+    margin: 30px 0;
+}
+
+/* End App */
+
+/* Footer */
+.footer {
+    background: white;
+    color: black;
+    padding: 30px 0;
+}
+
+.footer .container {
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.footer h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: deeppink;
+}
+
+.footer ul {
+    list-style: none;
+    line-height: 30px;
+    font-size: 16px;
+}
+
+.footer ul li {
+    cursor: pointer;
+}
+
+.footer-about {
+    width: 35%;
+}
+
+.copyright {
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 30px;
+    border-top: 1px solid #b2b2b2;
+    background-color: #4CAF50;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+ /* Media Queries for responsiveness */
+ @media (max-width: 600px) {
+ }
+/* End Footer */
+
+
+
+
+
+
+
+        html {
+            scroll-behavior: smooth;
+        }
+        a {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            margin-left: 20px;
+
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+        }
+
+        .navbar .logo {
+            font-size: 35px;
+            font-weight: 700;
+            color: #333;
+        }
+
+        .navbar .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .navbar .nav-links .a1 {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            font-size: 25px;
+            font-weight: 400;
+            position: relative;
+        }
+
+        .navbar .nav-links .a1.active {
+            color: #ff007f;
+        }
+
+        .navbar .nav-links .a1::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 2px;
+            background-color: blue;
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            transition: width 0.3s;
+        }
+
+        .navbar .nav-links .a1.active::after {
+            width: 100%;
+
+
+        }
+
+        .navbar .nav-links .a1:hover::after {
+            width: 100%;
+        }
+
+        .fixed {
+            position: fixed;
+            width: 100%;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="fixed">
+        <header class="navbar">
+            <nav class="nav-links">
+                <a class="a1" href="./index.html">⬅️Back</a>
+            </nav>
+            <div class="logo">AJ Food Store</div>
+        </header>
+    </div><br><br><br><br>
+    <!-- Restaurant Menu -->
+<div class="section" id="menu">
+    <div class="container-menu">
+        <ul class="category">
+            <li class="active">All</li>
+            <li><a href="./menu/biryani.html">Biryani</a></li>
+            <li><a href="./menu/chicken.html">Chicken</a></li>
+            <li><a href="./menu/pizza.html">Pizza</a></li>
+            <li><a href="./menu/burger.html">Burger</a></li>
+            <li><a href="./menu/pasta.html">Pasta</a></li>
+        </ul>
+
+        <div class="container">
+            <div class="restaurant-menu">
+                <div class="menu-item">
+                    <img src="./img/Aloo Gobi.jpg"
+                        alt="" />
+
+                    <div class="title">Food Restaurant | Aloo Gobi</div>
+
+                    <div class="location">Indian Foods</div>
+
+                    <div class="order flex">
+                        <div class="price">&#8377; 250.00</div>
+                        <a href="./order1/Order2.html" class="btn btn-menu">Order Now</a>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <img src="./img/Vindaloo.jpg"
+                        alt="" />
+
+                    <div class="title">Food Restaurant | Vindaloo</div>
+
+                    <div class="location">Indian Foods</div>
+
+                    <div class="order flex">
+                        <div class="price">&#8377; 200.00</div>
+                        <a href="./order1/Order2.html" class="btn btn-menu">Order Now</a>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <img src="./img/Samosa.jpg"
+                        alt="" />
+
+                    <div class="title">Food Restaurant |Samosa</div>
+
+                    <div class="location">Indian Foods</div>
+
+                    <div class="order flex">
+                        <div class="price">&#8377; 250.00</div>
+                        <a href="./order1/Order2.html" class="btn btn-menu">Order Now</a>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <img src="./img/Butter Chicken.jpg"
+                        alt="" />
+
+                    <div class="title">Food Restaurant | Butter Chicken</div>
+
+                    <div class="location">Indian Foods</div>
+
+                    <div class="order flex">
+                        <div class="price">&#8377; 299.00</div>
+                        <a href="./order1/Order2.html" class="btn btn-menu">Order Now</a>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <img src="./img/Chaat.jpg"
+                        alt="" />
+
+                    <div class="title">Food Restaurant | Chaat</div>
+
+                    <div class="location">Indian Foods</div>
+
+                    <div class="order flex">
+                        <div class="price">&#8377; 150.00</div>
+                        <a href="./order1/Order2.html" class="btn btn-menu">Order Now</a>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <img src="./img/Chana Masala.jpg"
+                        alt="" />
+
+                    <div class="title">Food Restaurant | chana Masala</div>
+
+                    <div class="location">Indian Foods</div>
+
+                    <div class="order flex">
+                        <div class="price">&#8377; 250.00</div>
+                        <a href="./order1/Order2.html" class="btn btn-menu">Order Now</a>
+                    </div>
+                </div>
+                
+
+                <div class="menu-item">
+                    <img src="./img/Dal Makhani.jpg"
+                        alt="" />
+
+                    <div class="title">Food Restaurant | Dal Makhani</div>
+
+                    <div class="location">Indian Foods</div>
+
+                    <div class="order flex">
+                        <div class="price">&#8377; 325.00</div>
+                        <a href="./order1/Order2.html" class="btn btn-menu">Order Now</a>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <img src="./img/Dal Tadka.jpg"
+                        alt="" />
+
+                    <div class="title">Food Restaurant | dal Tadka</div>
+
+                    <div class="location">Indian Foods</div>
+
+                    <div class="order flex">
+                        <div class="price">&#8377; 125.00</div>
+                        <a href="./order1/Order2.html" class="btn btn-menu">Order Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Restaurant Menu -->
+
+<!-- FAQ -->
+<div class="section" id="faq">
+    <h2 class="secondary">Frequently Asked Questions</h2>
+
+    <div class="faq">
+        <details>
+            <summary>What are the store hours?</summary>
+            <div class="content">
+                <p>
+                    Most food stores have specific opening and closing times,
+                     which can vary by location. It's best to check the store's 
+                     website or call ahead to confirm their hours of operation.
+                </p>
+            </div>
+        </details>
+
+        <details>
+            <summary>Do you offer online shopping or delivery services?</summary>
+            <div class="content">
+                <p>
+                    Many food stores now provide online shopping options and home
+                     delivery services. You can usually find this information on 
+                     their website or through their mobile app.
+                </p>
+            </div>
+        </details>
+
+        <details>
+            <summary> What is your return policy for groceries?</summary>
+            <div class="content">
+                <p>
+                    Food stores typically have a return policy for perishable and non-perishable items.
+                     It's advisable to keep your receipt and check the store's policy regarding returns and exchanges.
+                </p>
+            </div>
+        </details>
+
+        <details>
+            <summary> Can I find locally sourced products?</summary>
+            <div class="content">
+                <p>
+                    Many food stores prioritize local sourcing and may have a section dedicated to local products.
+                     Inquire with staff about the availability of locally sourced items.
+                </p>
+            </div>
+        </details>
+    </div>
+</div>
+<!-- End FAQ -->
+
+<!-- App -->
+<div class="section" id="app">
+    <div class="container flex">
+        <div class="app-photo">
+            <img width="500px" src="pngegg.png" alt="" />
+        </div>
+
+        <div class="text">
+            <h2 class="secondary">Download The FoodLover App</h2>
+            <p>
+                The FoodLover App is your ultimate companion for discovering delicious dining experiences
+                 and earning rewards at your favorite restaurants.
+                 Designed for food enthusiasts, this app allows you to explore a wide range of eateries, 
+                 from casual spots to fine dining, while enjoying exclusive offers and promotions.
+            </p>
+
+            <div class="download flex">
+                <div class="app-store">
+                    <ion-icon name="logo-google-playstore"></ion-icon>
+                    <p>
+                        GET IT ON <br />
+                        <span>Google Play</span>
+                    </p>
+                </div>
+
+                <div class="app-store">
+                    <ion-icon name="logo-apple"></ion-icon>
+                    <p>
+                        Donload on the <br />
+                        <span>App Store</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End App -->
+
+<!-- Footer -->
+<div class="footer" id="Contact Us">
+    <div class="container flex">
+        <div class="footer-about" >
+            <h2>Contact Us</h2>
+            <p>If you have any questions about our services, feel free to reach out!</p><br>
+                <p>Email: <a href="aj576302@gmail.com">aj576302@gmail.com</a></p><br>
+                <p>Phone: <a href="+919146987884">+919146987884</a></p><br>
+                <p>Address: Kailasnagar zirpi Tanda, ambad jalna, maharastra 431204</p><br>
+        </div>
+
+        <div class="footer-category">
+            <h2>Our Menu</h2>
+
+            <ul>
+                <li><a href="./menu/biryani.html">Biryani</a></li>
+                <li><a href="./menu/chicken.html">Chicken</a></li>
+                <li><a href="./menu/pizza.html">Pizza</a></li>
+                <li><a href="./menu/burger.html">Burger</a></li>
+                <li><a href="./menu/pasta.html">Pasta</a></li>
+            </ul>
+        </div>
+
+        <div class="quick-links">
+            <h2>Quick Links</h2>
+
+            <ul>
+                <li>About Us</li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="./order1/Order2.html">Order</a></li>
+                <li><a href="#how-it-works">Services</a></li>
+            </ul>
+        </div>
+
+        <div class="get-in-touch">
+            <h2>Get in touch</h2>
+            <ul>
+                <li>Account</li>
+                <li>Support Center</li>
+                <li>Feedback</li>
+                <li>Suggession</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="copyright">
+        <p>Copyright &copy; 2024 Design By Developer Akshay Jadhav</p>
+    </div>
+</div>
+<!-- End Footer -->
+
+<!-- Ion Icons Js -->
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+<script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+
+<!-- End  Ion Icons Js -->
+</body>
+
+</html>

@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - Fresh Food Store</title>
+    <style>
+        * {
+            padding: 0%;
+            margin: 0%;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 10px;
+
+        }
+
+        h1,
+        h2 {
+            color: #333;
+        }
+
+        .service {
+            background: white;
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact {
+            background: #e7f3fe;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #4CAF50;
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        label,
+        input {
+            margin-top: 10px;
+            margin-bottom: 20px;
+            margin-left: 20px;
+            font-size: medium;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+        }
+
+        button {
+            justify-items: center;
+            text-align: center;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            margin-left: 350px;
+            width: 200px;
+            height: 30px;
+            border-radius: 5px;
+            background-color: #2dba31;
+            color: #f5fef5;
+            font-size: 20px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+        }
+
+        .btn:hover {
+            color: #f5faf5;
+            background-color: #51d955;
+            justify-content: center;
+            text-align: center;
+        }
+
+        h3 {
+            color: blue;
+        }
+
+        a {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            margin-left: 20px;
+
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+        }
+
+        .navbar .logo {
+            font-size: 35px;
+            font-weight: 700;
+            color: #333;
+        }
+
+        .navbar .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .navbar .nav-links .a1 {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            font-size: 25px;
+            font-weight: 400;
+            position: relative;
+        }
+
+        .navbar .nav-links .a1.active {
+            color: #ff007f;
+        }
+
+        .navbar .nav-links .a1::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 2px;
+            background-color: blue;
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            transition: width 0.3s;
+        }
+
+        .navbar .nav-links .a1.active::after {
+            width: 100%;
+
+
+        }
+
+        .navbar .nav-links .a1:hover::after {
+            width: 100%;
+        }
+
+        .fixed {
+            position: fixed;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="fixed">
+        <header class="navbar">
+            <nav class="nav-links">
+                <a class="a1" href="../index.html">⬅️Back</a>
+            </nav>
+            <div class="logo">AJ Food Store</div>
+        </header>
+    </div><br><br><br><br>
+    <div class="container">
+        <div class="Order Details">
+            <!-- <h2>Order Details</h2> -->
+            <form name="akshay">
+                </section>
+                <form name="akshay" class="main1" method="post" onsubmit="return showAlert();">
+                    <div class="field" id="form"><br>
+                        <h3>Customer  Order Details</h3><br>
+                        <label for="name">Full Name:</label>
+                        <input type="text" id="name" name="Full Name" required>
+
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="Email" required>
+
+                        <label for="phone">Phone Number:</label>
+                        <input type="tel" id="phone" name="Number" required pattern="[0-9,+91]{10}"
+                            title="Please enter a valid 10-digit phone number."><br>
+
+                        <label for="address">Delivery Address:</label>
+                        <textarea id="address" name="Address" rows="2" required></textarea>
+
+                        <label for="city">City:</label>
+                        <input type="text" id="city" name="City" required>
+
+                        <label for="state">State:</label>
+                        <input type="text" id="state" name="State" required><br>
+
+                        <label for="zip">Zip Code:</label>
+                        <input type="text" id="zip" name="Zip" required pattern="[0-9]{6}"
+                            title="Please enter a valid 6-digit zip code.">
+
+                        <label for="food">Select Food Item:</label>
+                        <select id="food" name="Food" required>
+                            <option value="">--Please choose an option--</option>
+                            <option value="pizza">Pizza</option>
+                            <option value="burger">Burger</option>
+                            <option value="sushi">Sushi</option>
+                            <option value="pasta">Pasta</option>
+                            <option value="salad">Salad</option>
+                        </select>
+
+                        <label for="quantity">Quantity:</label>
+                        <input type="text" id="quantity" name="Quantity" required>
+
+                        <br><br>
+                        <button class="btn" onclick="myFunction()" type="submit" id="submit-button">
+                            Order
+                        </button>
+                        <br>
+
+                    </div>
+        </div>
+        </form>
+        <h2>Our Services</h2>
+        <div class="service">
+            <h3>Fresh Produce Delivery</h3>
+            <p>We offer a wide range of fresh fruits and vegetables delivered right to your doorstep. Enjoy the
+                convenience of shopping from home!</p>
+        </div>
+
+        <div class="service">
+            <h3>Organic Products</h3>
+            <p>Our store features a variety of organic products, including grains, dairy, and snacks. Shop healthy and
+                support sustainable farming!</p>
+        </div>
+
+        <div class="service">
+            <h3>Meal Prep Kits</h3>
+            <p>Save time with our meal prep kits that include all the ingredients you need to create delicious meals at
+                home.</p>
+        </div>
+
+        <div class="service">
+            <h3>Cooking Classes</h3>
+            <p>Join our cooking classes to learn how to prepare healthy meals using fresh ingredients. Perfect for all
+                skill levels!</p>
+        </div>
+        <div class="contact">
+            <h2>Contact Us</h2>
+            <p>If you have any questions about our services, feel free to reach out!</p>
+            <p>Email: <a href="aj576302@gmail.com">aj576302@gmail.com</a></p>
+            <p>Phone: <a href="9146987884">+919146987884</a></p>
+            <p>Address:Kailasnagar Zirpi Tanda, Ambad,Jalna, Maharastra 431204</p>
+        </div>
+
+    </div>
+    <footer>
+        <p> Copyright &copy; 2024 Design By Developer Akshay Jadhav</p>
+    </footer>
+    <script>
+        // document.getElementById('akshay').addEventListener('submit', function (event) {
+        //     event.preventDefault(); // Prevent the default form submission
+
+        //     // Display an alert with a message
+        //     alert('Form submitted successfully!');
+
+        //     // Reset the form fields
+        //     this.reset();
+        // });
+
+
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwfVMzpMUv3DzUUISQsKwFaEqkv88OfjxZoZ5hpINZa11ODqLq1i-XhyNW2jDG1_u3JCw/exec'
+        const form = document.forms['akshay']
+
+        form.addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            // form.addEventListener('submit', e => {
+            //     e.preventDefault()
+
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => console.log('Success!', response))
+                .catch(error => console.error('Error!', error.message))
+            alert('Order submitted successfully!');
+            this.reset();
+
+        })</script>
+</body>
+</script>
+
+</html>
